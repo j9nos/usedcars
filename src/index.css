@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
+}
+body {
+  background: url("assets/old-car.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.page-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 12, 28, 0.844);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  animation-name: blur-background;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+@keyframes blur-background {
+  from {
+    background-color: rgba(0, 12, 28, 0.392);
+    -webkit-backdrop-filter: blur(0px);
+    backdrop-filter: blur(0px);
+  }
+  to {
+    background-color: rgba(0, 12, 28, 0.844);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+.header {
+  background-color: black;
+  color: rgba(1, 104, 99, 0.672);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+}
+.header > h1 {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.secondary-container {
+  display: flex;
+  justify-content: center;
+  margin-top:10px;
+}
+.list-container {
+  padding-bottom: 30px;
+  min-width: 50vh;
+  max-height: 70vh;
+  background-color: rgb(25, 25, 25);
+  border-radius: 10px;
+  overflow: auto;
+  text-align: center;
+}
+.list-container > h1 {
+  color: rgb(200, 200, 200);
+}
+.list-container > ul {
+  list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.list-container > ul > li {
+  margin-top: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  color: rgba(0, 49, 47, 0.974);
+  font-size: 22px;
+  font-weight: bold;
+  background-color: rgb(200, 200, 200);
+  border-radius: 10px;
+}
+.invisible {
+  display: none;
+}
+.visible {
+  display: block;
+}
