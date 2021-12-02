@@ -78,6 +78,9 @@ body {
   background-color: rgb(200, 200, 200);
   border-radius: 10px;
 }
+.list-container>ul>li>span{
+  font-size: 12px;
+}
 .invisible {
   display: none;
 }

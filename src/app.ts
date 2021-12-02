@@ -9,7 +9,6 @@
  */
 var button = document.querySelector("#load-cars-button");
 var list = document.querySelector("#car-list");
-var container = document.querySelector("#list-container");
 
 function fetchCars() {
   var carList: Car[] = [];
@@ -42,13 +41,16 @@ function loadCars() {
   var cars = JSON.parse(sessionStorage.getItem("car-session"));
   cars.map((car) => {
     let li = document.createElement("li");
+    let span = document.createElement("span");
+    span.innerHTML = " "+car.brand+" / "+car.price+" HUF";
     li.innerHTML = car.plate;
+    li.append(span);
     li.setAttribute("class", "list-group-item");
     list.append(li);
   });
 }
 
 fetchCars();
-if(sessionStorage.getItem("car-session")){
-    loadCars()
+if (sessionStorage.getItem("car-session")) {
+  loadCars();
 }
