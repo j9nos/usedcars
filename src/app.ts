@@ -22,8 +22,8 @@ const loadCars = (): void => {
     .then((res) => res.text())
     .then((result) => {
       JSON.parse(result).map((car) => {
-        return carList.psh(
-          new Car(u
+        return carList.push(
+          new Car(
             car.id,
             car.plate,
             car.color,
