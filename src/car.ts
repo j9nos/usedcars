@@ -7,7 +7,7 @@
  * Github: https://github.com/olahjg & https://github.com/Gyuri21
  * Licenc: GNU GPL
  */
-class Car {
+export default class Car {
   id: number;
   plate: string;
   color: string;

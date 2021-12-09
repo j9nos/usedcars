@@ -7,7 +7,11 @@
  * Github: https://github.com/olahjg & https://github.com/Gyuri21
  * Licenc: GNU GPL
  */
-var list = document.querySelector("#car-list");
+
+import Car from "./car.js";
+import CarTest from "./carTest.js";
+
+const carListDOM = document.querySelector("#car-list");
 
 const CARS_URL = "http://localhost:4000/cars";
 
@@ -15,12 +19,21 @@ const introduce = (): void => {
   console.log("Olah Janos Gergely & Hegedus Gyorgy\n2021-12-06\nSZOFT2NAPPALI");
 };
 
+const runTest = (): void => {
+  const testCar = new CarTest("Volvo");
+  console.log(
+    testCar.isBrandOkay()
+      ? "Működik a példányosítás és a brand is jó"
+      : "Nem Volvo de azért jó"
+  );
+};
+
 const loadCars = (): void => {
   const carList: Car[] = [];
   fetch(CARS_URL, { method: "GET" })
     .then((res) => res.text())
     .then((result) => {
-      JSON.parse(result).map((car) => {
+      JSON.parse(result).map((car: any) => {
         return carList.push(
           new Car(
             car.id,
@@ -39,7 +52,7 @@ const loadCars = (): void => {
         let li = document.createElement("li");
         li.innerHTML = car.plate;
         li.setAttribute("class", "list-group-item");
-        list.append(li);
+        carListDOM.append(li);
       });
     })
     .catch((err) => console.log(err));
@@ -47,3 +60,4 @@ const loadCars = (): void => {
 
 introduce();
 loadCars();
+runTest();
