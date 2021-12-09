@@ -7,7 +7,6 @@
  * Github: https://github.com/olahjg & https://github.com/Gyuri21
  * Licenc: GNU GPL
  */
-var button = document.querySelector("#load-cars-button");
 var list = document.querySelector("#car-list");
 
 const CARS_URL = "http://localhost:4000/cars";
