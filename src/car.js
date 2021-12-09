@@ -3,7 +3,7 @@
  * Authors: Olah Janos Gergely & Hegedus Gyorgy
  * Copyright: 2021, Olah Janos Gergely & Hegedus Gyorgy
  * Group: Szoft II/N
- * Date: 2021-12-02
+ * Date: 2021-12-09
  * Github: https://github.com/olahjg & https://github.com/Gyuri21
  * Licenc: GNU GPL
  */
